@@ -1,0 +1,10 @@
+<div class="container ">
+<div class="row justify-content-center ">
+      <a *ngFor="let movie of movies; let i = index" class="col-6 my-2 p-5" [routerLink]="['movie', movie.id]"> <div class="card" style="width: 18rem;">
+        <img [src]= movie.poster_path  class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+        </div>
+      </div> </a>
+    
+</div></div>

@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div class="row">
+      <div class="img col-4">
+        <img class="img-fluid" src="{{movie.poster_path}}">
+   
+      </div>
+      <div class="col-8">
+        <h2>{{movie.title}}</h2>
+          <p>{{movie.overview}}</p>
+          <p>{{movie.release_date | date:'MMMM YYYY' }}</p>  
+          <p>Custom rating template provided as child element</p>
+
+
+          <ngb-rating [(rate)]="movie.vote_average"></ngb-rating>
+          <hr>
+          <pre>Rate: <b>{{movie.vote_average}}</b></pre>
+      </div>
+    </div>
+  </div>
